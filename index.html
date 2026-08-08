@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="theme-color" content="#0f172a" />
+<meta name="theme-color" content="#f8f7f4" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
 <title>BMI Calculator — Tabutility</title>
 <meta name="description" content="Free BMI calculator. Calculate your Body Mass Index using metric or imperial measurements. Includes BMI category ranges."/>
 <meta name="keywords" content="bmi calculator, body mass index, bmi chart, healthy weight calculator, bmi metric imperial"/>
@@ -29,39 +30,47 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a healthy BMI?","acceptedAnswer":{"@type":"Answer","text":"A BMI of 18.5–24.9 is considered healthy for most adults."}},{"@type":"Question","name":"Is BMI accurate?","acceptedAnswer":{"@type":"Answer","text":"BMI is a useful screening tool but doesn't account for muscle mass or body composition."}},{"@type":"Question","name":"Is the BMI Calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely free, no sign-up needed."}},{"@type":"Question","name":"Does it support metric and imperial?","acceptedAnswer":{"@type":"Answer","text":"Yes — toggle between kg/cm and lbs/ft."}}]}</script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f172a;color:#f1f5f9;min-height:100vh}
-nav{background:#1e293b;border-bottom:1px solid #334155;padding:14px 24px;display:flex;align-items:center;gap:16px}
-nav a{color:#94a3b8;text-decoration:none;font-size:14px}
-nav a:hover{color:#f1f5f9}
-nav .brand{color:#38bdf8;font-weight:700;font-size:18px}
-.ad-banner{background:#1e293b;border-bottom:1px solid #334155;padding:4px;text-align:center}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f8f7f4;color:#0f172a;min-height:100vh}
+nav{background:#ffffff;border-bottom:1px solid #e2e8f0;padding:14px 24px;display:flex;align-items:center;gap:16px}
+nav a{color:#64748b;text-decoration:none;font-size:14px}
+nav a:hover{color:#0f172a}
+nav .brand{color:#0f172a;font-weight:700;font-size:18px}
+.ad-banner{background:#ffffff;border-bottom:1px solid #e2e8f0;padding:4px;text-align:center}
 #app{max-width:600px;margin:8px auto;padding:0 16px 40px}
-h1{font-size:26px;font-weight:700;color:#f1f5f9;margin:24px 0 6px;text-align:center}
-.subtitle{color:#94a3b8;font-size:14px;text-align:center;margin-bottom:24px}
-.card{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:24px;margin-bottom:16px}
+h1{font-size:26px;font-weight:700;color:#0f172a;margin:24px 0 6px;text-align:center}
+.subtitle{color:#64748b;font-size:14px;text-align:center;margin-bottom:24px}
+.card{background:#ffffff;border:1px solid #e2e8f0;border-radius:14px;padding:24px;margin-bottom:16px}
 .toggle-row{display:flex;gap:8px;margin-bottom:20px}
-.toggle-btn{flex:1;padding:10px;border-radius:8px;border:1px solid #334155;background:#0f172a;color:#94a3b8;font-size:14px;font-weight:600;cursor:pointer;transition:.2s}
-.toggle-btn.active{background:#38bdf8;color:#0f172a;border-color:#38bdf8}
-label{display:block;font-size:13px;font-weight:600;color:#94a3b8;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
+.toggle-btn{flex:1;padding:10px;border-radius:8px;border:1px solid #e2e8f0;background:#f8f7f4;color:#64748b;font-size:14px;font-weight:600;cursor:pointer;transition:.2s}
+.toggle-btn.active{background:#0f172a;color:#f8f7f4;border-color:#0f172a}
+label{display:block;font-size:13px;font-weight:600;color:#64748b;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em}
 .input-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
-input[type="number"]{width:100%;background:#0f172a;border:1px solid #334155;border-radius:8px;padding:12px 14px;color:#f1f5f9;font-size:16px;outline:none;transition:border-color .2s;-moz-appearance:textfield}
-input[type="number"]:focus{border-color:#38bdf8}
+input[type="number"]{width:100%;background:#f8f7f4;border:1px solid #e2e8f0;border-radius:8px;padding:12px 14px;color:#0f172a;font-size:16px;outline:none;transition:border-color .2s;-moz-appearance:textfield}
+input[type="number"]:focus{border-color:#0f172a}
 input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button{-webkit-appearance:none}
 .input-group{position:relative}
 .input-unit{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:13px;color:#64748b;pointer-events:none}
-.btn{display:block;width:100%;background:#38bdf8;color:#0f172a;border:none;border-radius:8px;padding:12px 28px;font-size:15px;font-weight:700;cursor:pointer;margin-top:4px;transition:background .2s}
-.btn:hover{background:#0ea5e9}
-.result-card{background:#0f172a;border:1px solid #334155;border-radius:12px;padding:24px;text-align:center;margin-top:16px}
+.btn{display:block;width:100%;background:#0f172a;color:#f8f7f4;border:none;border-radius:8px;padding:12px 28px;font-size:15px;font-weight:700;cursor:pointer;margin-top:4px;transition:background .2s}
+.btn:hover{background:#334155}
+.result-card{background:#f8f7f4;border:1px solid #e2e8f0;border-radius:12px;padding:24px;text-align:center;margin-top:16px}
 .bmi-number{font-size:52px;font-weight:800;margin-bottom:6px}
 .bmi-cat{font-size:18px;font-weight:700;margin-bottom:20px}
-.bmi-bar-wrap{background:#1e293b;border-radius:999px;height:12px;position:relative;margin-bottom:8px;overflow:hidden}
+.bmi-bar-wrap{background:#ffffff;border-radius:999px;height:12px;position:relative;margin-bottom:8px;overflow:hidden}
 .bmi-bar-fill{height:100%;border-radius:999px;transition:width .5s,background .5s}
 .bmi-scale{display:flex;justify-content:space-between;font-size:11px;color:#64748b;margin-bottom:16px}
 .bmi-ranges{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:12px}
-.range-item{background:#1e293b;border-radius:8px;padding:10px 12px;text-align:left}
-.range-label{font-size:11px;color:#94a3b8;text-transform:uppercase;letter-spacing:.04em}
+.range-item{background:#ffffff;border-radius:8px;padding:10px 12px;text-align:left}
+.range-label{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:.04em}
 .range-val{font-size:13px;font-weight:600;margin-top:2px}
 .hidden{display:none}
+</style>
+<style id="tabutility-brand">
+/* empty ad slots: reserve space, no bordered box */
+.ad-banner,.ad-slot,.ad-container{background:transparent!important;border:none!important;border-bottom:none!important;box-shadow:none!important}
+ins.adsbygoogle{visibility:hidden}
+ins.adsbygoogle[data-ad-status="filled"]{visibility:visible}
+nav .brand{color:#0f172a}
+body{-webkit-font-smoothing:antialiased}
 </style>
 </head>
 <body>
@@ -130,44 +139,44 @@ input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-in
   <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:20px 24px">
     
 
-<div style="margin:0 auto 20px;max-width:640px;background:#0f172a;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;border:1px solid #1e3a5f">
+<div style="margin:0 auto 20px;max-width:640px;background:#f8f7f4;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;border:1px solid #1e3a5f">
   <span style="font-size:26px;flex-shrink:0">📖</span>
   <div style="min-width:0">
-    <div style="font-size:11px;font-weight:700;color:#38bdf8;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px">Further Reading</div>
-    <a href="https://tabutility.com/blog/how-to-calculate-bmi/" style="font-size:13px;font-weight:700;color:#f1f5f9;text-decoration:none;display:block;line-height:1.35" target="_blank" rel="noopener">How to Calculate BMI and What Your Number Actually Means →</a>
+    <div style="font-size:11px;font-weight:700;color:#0f172a;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px">Further Reading</div>
+    <a href="https://tabutility.com/blog/how-to-calculate-bmi/" style="font-size:13px;font-weight:700;color:#0f172a;text-decoration:none;display:block;line-height:1.35" target="_blank" rel="noopener">How to Calculate BMI and What Your Number Actually Means →</a>
   </div>
 </div>
 
 <!-- embed-widget -->
-<div style="max-width:640px;margin:0 auto 32px;background:#1e293b;border:1px solid #334155;border-radius:12px;padding:18px">
-  <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px">Embed This Tool</h2>
+<div style="max-width:640px;margin:0 auto 32px;background:#ffffff;border:1px solid #e2e8f0;border-radius:12px;padding:18px">
+  <h2 style="font-size:15px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px">Embed This Tool</h2>
   <p style="font-size:13px;color:#64748b;margin-bottom:12px">Add this BMI Calculator to your website or blog for free — just paste this code:</p>
-  <div style="background:#0f172a;border:1px solid #334155;border-radius:8px;padding:12px;font-family:monospace;font-size:12px;color:#7dd3fc;word-break:break-all;margin-bottom:10px" id="embed-code">&lt;iframe src=&quot;https://bmi-calculator.tabutility.com/&quot; width=&quot;100%&quot; height=&quot;600&quot; frameborder=&quot;0&quot; style=&quot;border-radius:12px&quot; title=&quot;BMI Calculator by Tabutility&quot;&gt;&lt;/iframe&gt;
+  <div style="background:#f8f7f4;border:1px solid #e2e8f0;border-radius:8px;padding:12px;font-family:'Inter',monospace;font-size:12px;color:#7dd3fc;word-break:break-all;margin-bottom:10px" id="embed-code">&lt;iframe src=&quot;https://bmi-calculator.tabutility.com/&quot; width=&quot;100%&quot; height=&quot;600&quot; frameborder=&quot;0&quot; style=&quot;border-radius:12px&quot; title=&quot;BMI Calculator by Tabutility&quot;&gt;&lt;/iframe&gt;
 &lt;p style=&quot;font-size:12px&quot;&gt;&lt;a href=&quot;https://bmi-calculator.tabutility.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;BMI Calculator&lt;/a&gt; by &lt;a href=&quot;https://tabutility.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Tabutility&lt;/a&gt;&lt;/p&gt;</div>
-  <button onclick="navigator.clipboard.writeText(document.getElementById('embed-code').textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Embed Code',2000)})" style="background:#38bdf8;color:#0f172a;border:none;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer">Copy Embed Code</button>
+  <button onclick="navigator.clipboard.writeText(document.getElementById('embed-code').textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy Embed Code',2000)})" style="background:#0f172a;color:#f8f7f4;border:none;border-radius:8px;padding:9px 18px;font-size:13px;font-weight:700;cursor:pointer">Copy Embed Code</button>
   <span style="font-size:11px;color:#475569;margin-left:12px">Free to use — the credit link helps others find the tool</span>
 </div>
-<div style="margin:0 auto 24px;max-width:640px;background:#1e293b;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #334155" onclick="window.open('https://www.amazon.co.uk/s?k=health%20nutrition%20fitness%20books&tag=tabutility-20','_blank','noopener noreferrer')" title="Improve your health?">
+<div style="margin:0 auto 24px;max-width:640px;background:#ffffff;border-radius:10px;padding:14px 18px;display:flex;align-items:center;gap:14px;cursor:pointer;border:1px solid #e2e8f0" onclick="window.open('https://www.amazon.co.uk/s?k=health%20nutrition%20fitness%20books&tag=tabutility-20','_blank','noopener noreferrer')" title="Improve your health?">
   <span style="font-size:28px;flex-shrink:0">📚</span>
   <div style="min-width:0">
-    <div style="font-size:13px;font-weight:700;color:#f1f5f9;margin-bottom:3px">Improve your health?</div>
-    <div style="font-size:12px;color:#94a3b8">Browse health & nutrition books <span style="color:#f59e0b;white-space:nowrap">→ Browse on Amazon</span></div>
+    <div style="font-size:13px;font-weight:700;color:#0f172a;margin-bottom:3px">Improve your health?</div>
+    <div style="font-size:12px;color:#64748b">Browse health & nutrition books <span style="color:#f59e0b;white-space:nowrap">→ Browse on Amazon</span></div>
     <div style="font-size:10px;color:#475569;margin-top:3px">As an Amazon Associate we earn from qualifying purchases.</div>
   </div>
 </div>
-<h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px">Related Tools</h2>
+<h2 style="font-size:15px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px">Related Tools</h2>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
-      <a href="https://tdee-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
-        <div style="font-size:13px;font-weight:600;color:#f1f5f9">TDEE Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Wellness</div>
+      <a href="https://tdee-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#0f172a">TDEE Calculator</div><div style="font-size:11px;color:#64748b;margin-top:2px">Wellness</div>
       </a>
-      <a href="https://body-fat-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
-        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Body Fat Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Wellness</div>
+      <a href="https://body-fat-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#0f172a">Body Fat Calculator</div><div style="font-size:11px;color:#64748b;margin-top:2px">Wellness</div>
       </a>
-      <a href="https://water-intake-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
-        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Water Intake Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Wellness</div>
+      <a href="https://water-intake-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#0f172a">Water Intake Calculator</div><div style="font-size:11px;color:#64748b;margin-top:2px">Wellness</div>
       </a>
-      <a href="https://age-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
-        <div style="font-size:13px;font-weight:600;color:#f1f5f9">Age Calculator</div><div style="font-size:11px;color:#94a3b8;margin-top:2px">Calculators</div>
+      <a href="https://age-calculator.tabutility.com/" style="display:block;background:rgba(255,255,255,0.07);border:1px solid #e2e8f0;border-radius:10px;padding:12px 16px;text-decoration:none;color:inherit">
+        <div style="font-size:13px;font-weight:600;color:#0f172a">Age Calculator</div><div style="font-size:11px;color:#64748b;margin-top:2px">Calculators</div>
       </a>
     </div>
   </div>
@@ -175,22 +184,22 @@ input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-in
 
 <div style="max-width:860px;margin-left:auto;margin-right:auto;margin-top:8px;margin-bottom:24px;padding:0 16px">
   <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:20px 24px">
-    <h2 style="font-size:15px;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px">Frequently Asked Questions</h2>
+    <h2 style="font-size:15px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px">Frequently Asked Questions</h2>
     <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
-      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">What is a healthy BMI?</div>
-      <div style="font-size:13px;color:#94a3b8;line-height:1.5">A BMI of 18.5–24.9 is considered healthy for most adults.</div>
+      <div style="font-size:14px;font-weight:600;color:#0f172a;margin-bottom:6px">What is a healthy BMI?</div>
+      <div style="font-size:13px;color:#64748b;line-height:1.5">A BMI of 18.5–24.9 is considered healthy for most adults.</div>
     </div>
     <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
-      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Is BMI accurate?</div>
-      <div style="font-size:13px;color:#94a3b8;line-height:1.5">BMI is a useful screening tool but doesn't account for muscle mass or body composition.</div>
+      <div style="font-size:14px;font-weight:600;color:#0f172a;margin-bottom:6px">Is BMI accurate?</div>
+      <div style="font-size:13px;color:#64748b;line-height:1.5">BMI is a useful screening tool but doesn't account for muscle mass or body composition.</div>
     </div>
     <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:14px 0">
-      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Is this free?</div>
-      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Yes — completely free, no sign-up needed.</div>
+      <div style="font-size:14px;font-weight:600;color:#0f172a;margin-bottom:6px">Is this free?</div>
+      <div style="font-size:13px;color:#64748b;line-height:1.5">Yes — completely free, no sign-up needed.</div>
     </div>
     <div style="padding:14px 0">
-      <div style="font-size:14px;font-weight:600;color:#f1f5f9;margin-bottom:6px">Metric or imperial?</div>
-      <div style="font-size:13px;color:#94a3b8;line-height:1.5">Both — toggle between kg/cm and lbs/ft.</div>
+      <div style="font-size:14px;font-weight:600;color:#0f172a;margin-bottom:6px">Metric or imperial?</div>
+      <div style="font-size:13px;color:#64748b;line-height:1.5">Both — toggle between kg/cm and lbs/ft.</div>
     </div>
   </div>
 </div>
@@ -270,12 +279,12 @@ function calculate() {
 
 <section id="seo-content">
   <style>
-    #seo-content{max-width:760px;margin:2.5rem auto;padding:0 1.25rem 3rem;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#334155;line-height:1.7}
+    #seo-content{max-width:760px;margin:2.5rem auto;padding:0 1.25rem 3rem;font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;color:#334155;line-height:1.7}
     #seo-content h2{font-size:1.35rem;color:#0f172a;margin:2rem 0 .75rem}
     #seo-content h3{font-size:1.05rem;color:#0f172a;margin:1.25rem 0 .5rem}
     #seo-content p,#seo-content li{font-size:.95rem}
     #seo-content .example{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:1rem 1.25rem;margin:1rem 0}
-    @media (prefers-color-scheme:dark){#seo-content{color:#cbd5e1}#seo-content h2,#seo-content h3{color:#f1f5f9}#seo-content .example{background:#1e293b;border-color:#334155}}
+    
   </style>
   <p>This BMI calculator estimates your Body Mass Index from your height and weight in either metric or imperial units, and shows which standard category the result falls into. It is a quick screening tool for adults who want a general sense of whether their weight sits in a healthy range for their height.</p>
 
@@ -296,5 +305,11 @@ function calculate() {
   <h3>Should children use the same BMI categories?</h3>
   <p>No. Children and teens are assessed with age- and sex-specific BMI percentile charts rather than the fixed adult ranges, so consult a paediatric growth chart or a doctor.</p>
 </section>
+<footer style="border-top:1px solid #e2e8f0;background:#ffffff;margin-top:48px;padding:28px 24px;text-align:center;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:13px;color:#64748b;line-height:1.8">
+<div style="font-weight:700;color:#0f172a;font-size:15px">⚡ Tabutility</div>
+<div>Free, private, browser-based tools. No sign-up, no tracking.</div>
+<div><a href="https://tabutility.com" style="color:#0f172a;font-weight:600;text-decoration:none">All Tools</a> · <a href="https://tabutility.com/blog/" style="color:#64748b;text-decoration:none">Blog</a> · <a href="https://tabutility.com/#about" style="color:#64748b;text-decoration:none">About</a></div>
+<div style="margin-top:6px;color:#94a3b8">© 2026 Tabutility</div>
+</footer>
 </body>
 </html>
