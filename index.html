@@ -22,10 +22,8 @@
 <meta name="twitter:title" content="BMI Calculator"/>
 <meta name="twitter:description" content="Calculate your Body Mass Index using metric or imperial measurements."/>
 <link rel="preconnect" href="https://www.googletagmanager.com" />
-  <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
-<script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-78VZWJ5B1W');});</script>
+  <script>window.addEventListener('load',function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-78VZWJ5B1W';document.head.appendChild(s);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','G-78VZWJ5B1W');});</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"BMI Calculator","url":"https://bmi-calculator.tabutility.com/","description":"Free BMI calculator. Calculate your Body Mass Index using metric or imperial measurements.","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"Tabutility","url":"https://tabutility.com"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Tabutility","item":"https://tabutility.com"},{"@type":"ListItem","position":2,"name":"Calculators","item":"https://tabutility.com"},{"@type":"ListItem","position":3,"name":"BMI Calculator","item":"https://bmi-calculator.tabutility.com/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a healthy BMI?","acceptedAnswer":{"@type":"Answer","text":"A BMI of 18.5–24.9 is considered healthy for most adults."}},{"@type":"Question","name":"Is BMI accurate?","acceptedAnswer":{"@type":"Answer","text":"BMI is a useful screening tool but doesn't account for muscle mass or body composition."}},{"@type":"Question","name":"Is the BMI Calculator free?","acceptedAnswer":{"@type":"Answer","text":"Yes — completely free, no sign-up needed."}},{"@type":"Question","name":"Does it support metric and imperial?","acceptedAnswer":{"@type":"Answer","text":"Yes — toggle between kg/cm and lbs/ft."}}]}</script>
@@ -71,8 +69,6 @@ input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-in
 nav .brand{color:#fff}
 nav a:hover{color:#818cf8}
 input:focus,select:focus,textarea:focus{border-color:#818cf8!important}
-/* AdSense not yet approved: hide all ad frames (container min-height still reserves space). Remove these two lines after approval. */
-ins.adsbygoogle,.ad-banner iframe,.ad-slot iframe,.ad-container iframe{visibility:hidden!important}
 </style>
 <script type="application/ld+json">
     {
@@ -95,12 +91,10 @@ ins.adsbygoogle,.ad-banner iframe,.ad-slot iframe,.ad-container iframe{visibilit
     }
     }
     </script>
-  <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="noindex, follow">
 </head>
 <body>
 <nav><span class="brand">⚡ Tabutility</span><a href="https://tabutility.com">← All Tools</a></nav>
-<div class="ad-banner" style="min-height:250px"><ins class="adsbygoogle" style="display:block;min-height:90px" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
 <div id="app">
   <h1>⚖️ BMI Calculator</h1>
   <p class="subtitle">Calculate your Body Mass Index instantly</p>
@@ -225,11 +219,6 @@ ins.adsbygoogle,.ad-banner iframe,.ad-slot iframe,.ad-container iframe{visibilit
   </div>
 </div>
 
-<div style="text-align:center;padding:8px;min-height:250px">
-  <ins class="adsbygoogle" style="display:block;min-height:90px" data-ad-client="ca-pub-7039091592734005" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins>
-  
-</div>
-
 <script>
 let unit = 'metric';
 function setUnit(u) {
@@ -275,29 +264,6 @@ function calculate() {
   document.getElementById('result').classList.remove('hidden');
 }
 </script>
-<script>
-(function(){
-  var ins=document.querySelectorAll('.adsbygoogle:not([data-lazy-done])');
-  // Skip the first ad (top of fold); defer the rest
-  var belowFold=Array.from(ins).slice(1);
-  if(!belowFold.length)return;
-  if('IntersectionObserver' in window){
-    var io=new IntersectionObserver(function(entries,obs){
-      entries.forEach(function(e){
-        if(e.isIntersecting){
-          (adsbygoogle=window.adsbygoogle||[]).push({});
-          e.target.setAttribute('data-lazy-done','1');
-          obs.unobserve(e.target);
-        }
-      });
-    },{rootMargin:'200px'});
-    belowFold.forEach(function(el){io.observe(el);});
-  } else {
-    belowFold.forEach(function(){(adsbygoogle=window.adsbygoogle||[]).push({});});
-  }
-})();
-</script>
-
 <section id="seo-content">
   <style>
     #seo-content{max-width:760px;margin:2.5rem auto;padding:0 1.25rem 3rem;font-family:'Segoe UI',system-ui,Arial,sans-serif;color:#334155;line-height:1.7}
